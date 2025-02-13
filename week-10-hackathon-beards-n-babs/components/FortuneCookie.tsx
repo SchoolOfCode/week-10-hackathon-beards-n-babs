@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import styles from "./FortuneCookie.module.css"
+import TrackedClicks from "./ClickTracker"
 
 interface FortuneCookieProps {
   fortunes: string[]
@@ -18,13 +19,13 @@ export default function FortuneCookie({ fortunes, cookieType }: FortuneCookiePro
 
   return (
     <div className={styles.container}>
-      <div
-        className={`${styles.cookie} ${cookieType === "malevolent" ? styles.malevolent : ""}`}
-        onClick={revealFortune}
-      >
-        {fortune ? fortune : "Click to reveal your fortune"}
-      </div>
+      <TrackedClicks onClick={revealFortune}>
+        <div
+          className={`${styles.cookie} ${cookieType === "malevolent" ? styles.malevolent : ""}`}
+        >
+          {fortune ? fortune : "Click to reveal your fortune"}
+        </div>
+      </TrackedClicks>
     </div>
-  )
+  );
 }
-
