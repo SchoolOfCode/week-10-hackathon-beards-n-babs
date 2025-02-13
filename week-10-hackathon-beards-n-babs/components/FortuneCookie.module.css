@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.cookie {
+  width: 200px;
+  height: 200px;
+  background-color: #f0e68c;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cookie:hover {
+  transform: scale(1.05);
+}
+
+.malevolent {
+  background-color: #8b4513;
+  color: #fff;
+}
+
