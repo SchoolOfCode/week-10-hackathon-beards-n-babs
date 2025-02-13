@@ -8,6 +8,7 @@ type TrackedClicksProps = {
 
 const TrackedClicks = ({ onClick, children }: TrackedClicksProps) => {
   const [clickCount, setClickCount] = useState<number>(0);
+  console.log(clickCount);
 
   const handleClick = () => {
     setClickCount(prev => {
