@@ -10,3 +10,4 @@ it("Should see an element with the text Click to reveal your fortune", () => {
 
   expect(cookieText).toBeDefined();
 });
+
