@@ -1,8 +1,11 @@
 "use client";
 
-import { useState } from "react";
+
+import { useState } from "react"
+import styles from "./FortuneCookie.module.css"
+import TrackedClicks from "./ClickTracker"
 import React from "react";
-import styles from "./FortuneCookie.module.css";
+
 
 interface FortuneCookieProps {
   fortunes: string[];
@@ -22,15 +25,15 @@ export default function FortuneCookie({
 
   return (
     <div className={styles.container}>
-      <div
-        className={`${styles.cookie} ${
-          cookieType === "malevolent" ? styles.malevolent : ""
-        }`}
-        onClick={revealFortune}
-        data-testid="btn"
-      >
-        {fortune ? fortune : "Click to reveal your fortune"}
-      </div>
+
+      <TrackedClicks onClick={revealFortune}>
+        <div
+          className={`${styles.cookie} ${cookieType === "malevolent" ? styles.malevolent : ""}`}
+        >
+          {fortune ? fortune : "Click to reveal your fortune"}
+        </div>
+      </TrackedClicks>
     </div>
   );
 }
+

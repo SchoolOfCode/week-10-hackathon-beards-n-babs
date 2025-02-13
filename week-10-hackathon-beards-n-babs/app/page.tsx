@@ -1,5 +1,7 @@
 import FortuneCookie from '../components/FortuneCookie';
 
+
+
 const normalFortunes = [
   'You will have a great day!',
   'Good fortune will be yours.',
