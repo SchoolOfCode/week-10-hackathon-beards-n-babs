@@ -13,9 +13,9 @@ const TrackedClicks = ({ onClick, children }: TrackedClicksProps) => {
   const handleClick = () => {
     setClickCount(prev => {
       const newCount = prev + 1;
-      if (newCount === 20) {
-        console.log("🔴COOKIE HAS GENERATED 20 FORTUNES🔴");
-        Sentry.captureException(new Error("Element clicked 20 times"));
+      if (newCount === 10) {
+        console.log("🔴COOKIE HAS GENERATED 10 FORTUNES🔴");
+        Sentry.captureException(new Error("Element clicked 10 times"));
         // Sentry logging will go here
       }
       return newCount;
