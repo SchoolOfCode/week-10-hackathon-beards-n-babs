@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Analytics } from "@vercel/analytics/next";
+// import { Analytics } from "@vercel/analytics/next";
 import type React from "react"; // Import React
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
           <Link href="/malevolent">Malevolent Cookie</Link>
         </nav>
         {children}
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   );
