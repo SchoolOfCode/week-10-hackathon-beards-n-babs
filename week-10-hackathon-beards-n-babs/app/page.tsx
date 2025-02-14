@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import FortuneCookie from "../components/FortuneCookie";
-import * as Sentry from "@sentry/nextjs";
+import { useEffect } from 'react';
+import FortuneCookie from '../components/FortuneCookie';
+import * as Sentry from '@sentry/nextjs';
 
 const normalFortunes = [
   'You will have a great day!',
@@ -20,8 +20,10 @@ const normalFortunes = [
 export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      Sentry.captureException(new Error("Page Unresponsive - Timeout Reached"));
-      console.log("🔴Timeout Reached🔴");
+      Sentry.captureException(
+        new Error('Page Unresponsive - Timeout Reached')
+      );
+      console.log('🔴Timeout Reached🔴');
     }, 10000); // 10 seconds delay
 
     return () => clearTimeout(timer); // Cleanup the timeout on component unmount
