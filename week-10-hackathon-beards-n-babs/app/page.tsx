@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-
-import { useEffect } from 'react';
-import FortuneCookie from '../components/FortuneCookie';
+import { useEffect } from "react";
+import FortuneCookie from "../components/FortuneCookie";
 
 const normalFortunes = [
-  'You will have a great day!',
-  'Good fortune will be yours.',
-  'A pleasant surprise is waiting for you.',
-  'Your hard work will pay off soon.',
-  'Adventure awaits around the corner!',
+  "You will have a great day!",
+  "Good fortune will be yours.",
+  "A pleasant surprise is waiting for you.",
+  "Your hard work will pay off soon.",
+  "Adventure awaits around the corner!",
 ];
 
 export default function Home() {
+  <button></button>;
   useEffect(() => {
-    console.log('Woohoo');
+    console.log("Woohoo");
     const timer = setTimeout(() => {
-      throw new Error('An error occurred Holly');
+      throw new Error("An error occurred Holly");
     }, 5000); // 5 seconds delay
 
     return () => clearTimeout(timer); // Cleanup the timeout on component unmount
