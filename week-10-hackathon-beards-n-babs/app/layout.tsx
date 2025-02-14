@@ -17,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <button></button>
         <nav>
           <Link href="/">Normal Cookie</Link>
           <Link href="/malevolent">Malevolent Cookie</Link>
