@@ -2,6 +2,7 @@
 
 import FortuneCookie from "../../components/FortuneCookie";
 import { useEffect } from "react";
+import * as Sentry from "@sentry/nextjs";
 
 const malevolentFortunes = [
   "Your code will have a bug. Good luck finding it!",
@@ -18,10 +19,10 @@ const malevolentFortunes = [
 
 export default function MalevolentCookie() {
   useEffect(() => {
-    console.log("Woohoo");
     const timer = setTimeout(() => {
-      throw new Error("An error occurred malevolent Holly");
-    }, 5000); // 5 seconds delay
+      Sentry.captureException(new Error("Page Unresponsive - Timeout Reached"));
+      console.log("🔴Timeout Reached🔴");
+    }, 10000); // 10 seconds delay
 
     return () => clearTimeout(timer); // Cleanup the timeout on component unmount
   }, []);
