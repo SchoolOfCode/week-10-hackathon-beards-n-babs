@@ -28,7 +28,6 @@ export default function MalevolentCookie() {
 
   return (
     <main>
-      <button>Husky</button>
       <h1>Malevolent Fortune Cookie</h1>
       <FortuneCookie fortunes={malevolentFortunes} cookieType="malevolent" />
     </main>
