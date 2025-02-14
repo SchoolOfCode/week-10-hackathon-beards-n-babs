@@ -1,17 +1,18 @@
 import { useState } from "react";
-import * as Sentry from "@sentry/nextjs"
+import { ReactNode } from "react";
+import * as Sentry from "@sentry/nextjs";
 
 type TrackedClicksProps = {
-    onClick: () => void;
-    children: ReactNode;
-  };
+  onClick: () => void;
+  children: ReactNode;
+};
 
 const TrackedClicks = ({ onClick, children }: TrackedClicksProps) => {
   const [clickCount, setClickCount] = useState<number>(0);
   console.log(clickCount);
 
   const handleClick = () => {
-    setClickCount(prev => {
+    setClickCount((prev) => {
       const newCount = prev + 1;
       if (newCount === 20) {
         console.log("🔴COOKIE HAS GENERATED 20 FORTUNES🔴");
